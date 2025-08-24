@@ -1,0 +1,17 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v1
+      - run: uv venv .venv && . .venv/bin/activate && uv pip install ruff
+      - run: . .venv/bin/activate && ruff check .
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v1
+      - run: uv venv .venv && . .venv/bin/activate && uv pip install -e ".[dev]"
+      - run: . .venv/bin/activate && pytest -q
