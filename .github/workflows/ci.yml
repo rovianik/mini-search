@@ -6,14 +6,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v1
-      - run: uv sync --frozen --all-groups
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.8.x"
+      - run: uv sync --locked
       - run: uv run ruff check .
 
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v1
-      - run: uv sync --frozen --all-groups
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.8.x"
+      - run: uv python pin ${{ matrix.python-version }}
+      - run: uv sync --locked
       - run: uv run pytest -q
