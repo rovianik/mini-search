@@ -1,0 +1,10 @@
+k1 = 1.2
+b = 0.75
+stopwords = true
+positions = false
+min_should_match = 1
+w_title = 1.4
+w_body  = 1.0
+tie_breaker = "doc_id"
+min_token_len = 2
+seed = 0

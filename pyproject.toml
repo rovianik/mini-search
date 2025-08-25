@@ -18,3 +18,10 @@ dev = [
     "pytest-benchmark>=5.1.0",
     "ruff>=0.12.10",
 ]
+
+[tool.uv.scripts]
+lint = "ruff check ."
+fmt = "ruff format"
+test = "pytest -q"
+qa = "ruff check . && pytest -q"
+
