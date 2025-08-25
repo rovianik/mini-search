@@ -3,7 +3,7 @@
 A mini search engine with ranked retrieval (inverted index + BM25).  
 Built to learn IR fundamentals through a practical, testable project.
 
-![CI](https://github.com/rovianik/mini-search/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/verinix/mini-search/actions/workflows/ci.yml/badge.svg)
 
 ## Quickstart
 

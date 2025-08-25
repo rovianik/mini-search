@@ -6,7 +6,7 @@ body:
     id: goal
     attributes:
       label: Goal
-      description: What outcome do we want? (Fit → Depth → Simple → Real)
+      description: What outcome do we want?
       placeholder: e.g., Implement BM25 scorer with explain()
   - type: textarea
     id: plan
