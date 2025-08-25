@@ -1,0 +1,25 @@
+name: Feature
+description: Plan a feature or task
+labels: ["feature"]
+body:
+  - type: input
+    id: goal
+    attributes:
+      label: Goal
+      description: What outcome do we want? (Fit → Depth → Simple → Real)
+      placeholder: e.g., Implement BM25 scorer with explain()
+  - type: textarea
+    id: plan
+    attributes:
+      label: Plan
+      description: Steps and acceptance criteria
+      placeholder: - Implement ...\n- Tests ...\n- Done when ...
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Milestone
+      options: ["M0", "M1", "M2", "M3"]
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / Links
