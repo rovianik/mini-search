@@ -8,4 +8,3 @@
 
 - [ ] Lint + tests green locally
 - [ ] Docs updated (README/DEMOS if user-visible)
-- [ ] Meets Fit → Depth → Simple → Real
