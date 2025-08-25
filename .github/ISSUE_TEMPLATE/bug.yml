@@ -1,0 +1,18 @@
+name: Bug
+description: Something is broken or flaky
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      placeholder: Describe the issue and expected vs actual
+  - type: textarea
+    id: repro
+    attributes:
+      label: Repro steps
+      placeholder: Steps, input, expected output...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Traceback
